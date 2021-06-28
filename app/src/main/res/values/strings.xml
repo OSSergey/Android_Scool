@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android_School</string>
+    <string name="standard">standard</string>
+    <string name="single_task">singleTask</string>
+    <string name="single_top">singleTop</string>
+    <string name="single_instance">singleInstance</string>
 </resources>
