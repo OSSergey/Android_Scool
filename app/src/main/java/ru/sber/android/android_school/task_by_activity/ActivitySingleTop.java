@@ -50,6 +50,7 @@ public class ActivitySingleTop extends AppCompatActivity {
         startActivity(new Intent(this, ActivitySingleInstance.class));
     }
 
+    //todo надо было сделать ведение счетчика через intent (putExtra/getExtra), но не догнал, как это сделать т.к. intent создается заново.
     public void infoTask() {
         List<ActivityManager.AppTask> tasks = mActivityManager.getAppTasks();
 
