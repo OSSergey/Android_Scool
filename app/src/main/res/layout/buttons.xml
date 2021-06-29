@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="10dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"/>
+        android:id="@+id/textView" />
 
     <Button
-        android:id="@+id/button_standard"
+        android:id="@+id/btn_standard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/standard" />
 
     <Button
-        android:id="@+id/button_single_task"
+        android:id="@+id/btn_single_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/single_task"/>
 
     <Button
-        android:id="@+id/button_single_top"
+        android:id="@+id/btn_single_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/single_top"/>
 
     <Button
-        android:id="@+id/button_single_instance"
+        android:id="@+id/btn_single_instance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/single_instance"/>
+
+    <Button
+        android:id="@+id/btn_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/info" />
 </LinearLayout>
