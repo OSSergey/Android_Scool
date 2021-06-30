@@ -1,2 +1,4 @@
+include ':viewtask'
+include ':activitytask'
 include ':app'
 rootProject.name = "Android_School"

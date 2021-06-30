@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ViewTask</string>
+    <string name="cyrillic">Кириллица</string>
+    <string name="enter_the_text_ru">Введите текст (На русском)</string>
+    <string name="enter_the_text_en">Введите текст (На английском)</string>
+    <string name="translit">Транслит</string>
+</resources>

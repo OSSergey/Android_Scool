@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ActivityTask</string>
+    <string name="standard">standard</string>
+    <string name="single_task">singleTask</string>
+    <string name="single_top">singleTop</string>
+    <string name="single_instance">singleInstance</string>
+    <string name="info">INFO</string>
+</resources>

@@ -1,18 +1,15 @@
-package ru.sber.android.android_school.task_by_activity;
+package ru.sber.android.activitytask;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-
 import java.util.List;
 
-import ru.sber.android.android_school.R;
 
-public class ActivityStandard extends AppCompatActivity {
+public class ActivitySingleTop extends AppCompatActivity {
     private final String LOG_TAG = "MY_LOG";
     private static final Counter mCounter = new Counter();
     ActivityManager mActivityManager;
@@ -26,7 +23,7 @@ public class ActivityStandard extends AppCompatActivity {
 
         mActivityManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
         TextView textView = findViewById(R.id.textView);
-        textView.setText(String.format("ActivityStandard number: %d", mCounter.getCount()));
+        textView.setText(String.format("ActivitySingleTop number: %d", mCounter.getCount()));
         findViewById(R.id.btn_standard).setOnClickListener(v -> startStandard());
         findViewById(R.id.btn_single_task).setOnClickListener(v -> startSingleTask());
         findViewById(R.id.btn_single_top).setOnClickListener(v -> startSingleTop());
@@ -58,9 +55,9 @@ public class ActivityStandard extends AppCompatActivity {
             if (task.getTaskInfo().baseActivity.flattenToShortString().startsWith("ru.sber.android.android_school")) {
                 Log.i(LOG_TAG, "------------------------------------------");
                 Log.i(LOG_TAG, "Count: " + task.getTaskInfo().numActivities);
-                Log.i(LOG_TAG, "Root : " + task.getTaskInfo().baseActivity.getShortClassName());
-                Log.i(LOG_TAG, "Top  : " + task.getTaskInfo().topActivity.getShortClassName());
-                Log.i(LOG_TAG, "ActivityStandard number: " + mCounter.getCount());
+                Log.i(LOG_TAG, "Root: " + task.getTaskInfo().baseActivity.getShortClassName());
+                Log.i(LOG_TAG, "Top: " + task.getTaskInfo().topActivity.getShortClassName());
+                Log.i(LOG_TAG, "ActivitySingleTop number: " + mCounter.getCount());
                 Log.i(LOG_TAG, "------------------------------------------");
             }
         }

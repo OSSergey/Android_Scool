@@ -1,4 +1,4 @@
-package ru.sber.android.android_school.task_by_activity;
+package ru.sber.android.activitytask;
 
 public class Counter {
     private Integer count = 0;
