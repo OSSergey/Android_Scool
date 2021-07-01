@@ -1,10 +1,12 @@
 package ru.sber.android.viewtask;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.widget.Button;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -15,24 +17,58 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextInputLayout textInputLayout1 = findViewById(R.id.text_input_layout_1);
-        TextInputLayout textInputLayout2 = findViewById(R.id.text_input_layout_2);
+        TextInputLayout textInputLayoutRu = findViewById(R.id.text_input_layout_ru);
+        TextInputLayout textInputLayoutEn = findViewById(R.id.text_input_layout_en);
+        Button translitBtn = findViewById(R.id.cyrillic_to_translit_btn);
+        Button cyrillicBtn = findViewById(R.id.translit_to_cyrillic_btn);
 
-        Button translitBtn = findViewById(R.id.translit_to_cyrillic_btn);
-        Button cyrillicBtn = findViewById(R.id.cyrillic_to_translit_btn);
+        EditText editTextRu = findViewById(R.id.edit_text_ru);
+        EditText editTextEn = findViewById(R.id.edit_text_en);
 
-        translitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        editTextRu.setFilters(new InputFilter[]{
+                new InputFilter() {
+                    @Override
+                    public CharSequence filter(CharSequence charSequence, int i, int i1, Spanned spanned, int i2, int i3) {
+                        if (charSequence.equals("")) {
+                            return charSequence;
+                        }
 
-            }
+                        if (charSequence.toString().matches("[а-яА-я]+")) {
+                            return charSequence;
+                        }
+
+                        return "";
+                    }
+                }
         });
 
-        cyrillicBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        //todo пока не придумал нормальный вариант для случаев: ZH, TS, CH, SH, SHCH, IE, IU, IA
+        editTextEn.setFilters(new InputFilter[]{
+                new InputFilter() {
+                    @Override
+                    public CharSequence filter(CharSequence charSequence, int i, int i1, Spanned spanned, int i2, int i3) {
+                        if (charSequence.equals("")) {
+                            return charSequence;
+                        }
 
-            }
+                        if (charSequence.toString().matches("[a-zA-Zq]+")) {
+                            return charSequence;
+                        }
+
+                        return "";
+                    }
+                }
+        });
+
+
+        translitBtn.setOnClickListener(v -> {
+            String text = textInputLayoutRu.getEditText().getText().toString();
+            textInputLayoutEn.getEditText().setText(Transliteration.toTranslit(text));
+        });
+
+        cyrillicBtn.setOnClickListener(v -> {
+            String text = textInputLayoutEn.getEditText().getText().toString();
+            textInputLayoutRu.getEditText().setText(Transliteration.toCyrillic(text));
         });
     }
 }

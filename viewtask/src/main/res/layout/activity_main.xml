@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_1"
+        android:id="@+id/text_input_layout_ru"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
+            android:id="@+id/edit_text_ru"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_the_text_ru"
@@ -30,16 +31,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/translit"
-        app:layout_constraintBottom_creator="@+id/text_input_layout_1"
+        app:layout_constraintBottom_creator="@+id/text_input_layout_ru"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_1"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_ru"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_2"
+        android:id="@+id/text_input_layout_en"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/cyrillic_to_translit_btn"
@@ -47,6 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cyrillic_to_translit_btn">
 
         <EditText
+            android:id="@+id/edit_text_en"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/enter_the_text_en"
@@ -54,17 +56,30 @@
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/text_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/without_letters"
+        app:layout_constraintBottom_creator="@+id/text_input_layout_en"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_en"
+        app:layout_constraintVertical_bias="0.0" />
+
     <Button
         android:id="@+id/translit_to_cyrillic_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/cyrillic"
-        app:layout_constraintBottom_creator="@+id/text_input_layout_2"
+        app:layout_constraintBottom_creator="@+id/text_desc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_input_layout_2"
+        app:layout_constraintTop_toBottomOf="@+id/text_desc"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
