@@ -86,6 +86,9 @@ public class Transliteration {
         return stringBuilder.toString();
     }
 
+
+    //todo пока не придумал нормальный вариант для случаев: ZH, TS, CH, SH, SHCH, IE, IU, IA
+
     public static String toCyrillic(String text) {
         StringBuilder stringBuilder = new StringBuilder(text.length());
 

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">uipractice</string>
+    <string name="start_linear_layout_activity">Пример LinearLayoutActivity</string>
+    <string name="red_text">red</string>
+    <string name="green_text">green</string>
+    <string name="blue_text">blue</string>
+    <string name="yellow_text">yellow</string>
+</resources>
