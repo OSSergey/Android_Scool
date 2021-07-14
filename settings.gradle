@@ -1,3 +1,5 @@
+
+include ':uipractice'
 include ':viewtask'
 include ':activitytask'
 include ':app'
