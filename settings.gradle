@@ -1,5 +1,4 @@
-
-include ':uipractice'
+include ':drawable_task'
 include ':viewtask'
 include ':activitytask'
 include ':app'
