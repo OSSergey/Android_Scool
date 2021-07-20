@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-<!--    пока ничего нет т.к. не понял как сделать в state list сразу два состояния
-state_pressed = true для крестика и нолика -->
-    <item android:state_pressed="true"/>
-</selector>

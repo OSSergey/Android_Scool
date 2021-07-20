@@ -6,11 +6,6 @@
     android:background="@drawable/bg_launcher"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/game_board" />
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,18 +62,33 @@
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_1"
                 android:layout_width="120dp"
-                android:layout_height="125dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <LinearLayout
+                android:layout_width="5dp"
+                android:orientation="vertical"
+                android:background="@color/black"
+                android:layout_height="match_parent"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_2"
-                android:layout_width="140dp"
-                android:layout_height="125dp" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <View style="@style/dividerVertical"
+                android:background="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_3"
                 android:layout_width="120dp"
-                android:layout_height="125dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
         </LinearLayout>
+
+        <View style="@style/dividerHorizontal"
+            android:background="@color/black"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -88,18 +98,30 @@
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_4"
                 android:layout_width="120dp"
-                android:layout_height="140dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <View style="@style/dividerVertical"
+                android:background="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_5"
-                android:layout_width="140dp"
-                android:layout_height="140dp" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <View style="@style/dividerVertical"
+                android:background="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_6"
                 android:layout_width="120dp"
-                android:layout_height="140dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
         </LinearLayout>
+
+        <View style="@style/dividerHorizontal"
+            android:background="@color/black"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -109,17 +131,26 @@
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_7"
                 android:layout_width="120dp"
-                android:layout_height="125dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <View style="@style/dividerVertical"
+                android:background="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_8"
-                android:layout_width="140dp"
-                android:layout_height="125dp" />
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
+
+            <View style="@style/dividerVertical"
+                android:background="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/quadrant_9"
                 android:layout_width="120dp"
-                android:layout_height="125dp" />
+                android:layout_height="120dp"
+                android:src="@drawable/tic_tac_toc_selector"/>
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>
